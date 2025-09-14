@@ -15,8 +15,8 @@
       <div
         class="max-w-[1200px] mx-auto px-4 flex items-center justify-between"
       >
-        <!-- Logo -->
-        <a
+
+      <a
           href="#"
           class="flex items-center gap-2 font-semibold text-green-700 text-lg"
         >
@@ -24,9 +24,9 @@
           Ink. House
         </a>
 
-        <!-- Nav + Cart -->
+
         <div class="flex items-center gap-8">
-          <!-- Nav -->
+
           <nav class="hidden md:block">
             <ul class="flex gap-8 text-gray-800">
               <li><a href="#" class="hover:text-green-700">Репродукции</a></li>
@@ -35,12 +35,12 @@
             </ul>
           </nav>
 
-          <!-- Cart -->
+
           <a href="#" class="text-gray-800 text-xl hover:text-green-700">
             <i class="fa-solid fa-cart-shopping"></i>
           </a>
 
-          <!-- Hamburger -->
+
           <button
             id="burger"
             class="md:hidden flex flex-col justify-between w-6 h-4"
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <!-- Mobile menu -->
+
       <nav id="mobileMenu" class="hidden md:hidden bg-[#F3F8F4] px-4 py-4">
         <ul class="flex flex-col gap-4 text-gray-800">
           <li><a href="#" class="hover:text-green-700">Репродукции</a></li>
@@ -61,6 +61,40 @@
         </ul>
       </nav>
     </header>
+
+    <section class="bg-white py-12">
+      <div
+        class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row items-center gap-10"
+      >
+
+      <div class="flex-1">
+          <img
+            src="./img/bird.svg"
+            alt="Bird painting"
+            class="w-full max-w-md mx-auto"
+          />
+        </div>
+
+
+        <div class="flex-1 text-center md:text-left">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+            Реплики картин<br />
+            от <span class="text-green-700">Ink. House</span>
+          </h1>
+          <p class="mt-4 text-gray-500 text-base md:text-lg">
+            Высокое качество отрисовки на плотной бумаге или льняном холсте.
+            Редкие произведения, доступные цены.
+          </p>
+          <a
+            href="#"
+            class="inline-block mt-6 px-6 py-3 border border-green-700 text-green-700 font-medium rounded hover:bg-green-700 hover:text-white transition"
+          >
+            Продукция
+          </a>
+        </div>
+      </div>
+    </section>
+
     <script src="./main.js"></script>
   </body>
 </html>

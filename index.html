@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relife Image</title>
-    <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INK Hause</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="bg-[#F3F8F4] py-4">
+      <div
+        class="max-w-[1200px] mx-auto px-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a
+          href="#"
+          class="flex items-center gap-2 font-semibold text-green-700 text-lg"
+        >
+          <img src="./img/logo.svg" alt="Ink. House logo" class="w-6 h-6" />
+          Ink. House
+        </a>
+
+        <!-- Nav + Cart -->
+        <div class="flex items-center gap-8">
+          <!-- Nav -->
+          <nav class="hidden md:block">
+            <ul class="flex gap-8 text-gray-800">
+              <li><a href="#" class="hover:text-green-700">Репродукции</a></li>
+              <li><a href="#" class="hover:text-green-700">Новинки</a></li>
+              <li><a href="#" class="hover:text-green-700">О нас</a></li>
+            </ul>
+          </nav>
+
+          <!-- Cart -->
+          <a href="#" class="text-gray-800 text-xl hover:text-green-700">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+
+          <!-- Hamburger -->
+          <button
+            id="burger"
+            class="md:hidden flex flex-col justify-between w-6 h-4"
+          >
+            <span class="block w-full h-[2px] bg-gray-800"></span>
+            <span class="block w-full h-[2px] bg-gray-800"></span>
+            <span class="block w-full h-[2px] bg-gray-800"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <nav id="mobileMenu" class="hidden md:hidden bg-[#F3F8F4] px-4 py-4">
+        <ul class="flex flex-col gap-4 text-gray-800">
+          <li><a href="#" class="hover:text-green-700">Репродукции</a></li>
+          <li><a href="#" class="hover:text-green-700">Новинки</a></li>
+          <li><a href="#" class="hover:text-green-700">О нас</a></li>
+        </ul>
+      </nav>
+    </header>
+    <script src="./main.js"></script>
+  </body>
 </html>

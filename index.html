@@ -1,29 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INK Hause</title>
-    <link rel="stylesheet" href="./src/output.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ink. House — test</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: "Rubik", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        background: #f3f7f5;
+      }
+    </style>
   </head>
   <body>
     <header class="bg-[#F3F8F4] py-4">
       <div
-        class="max-w-[1200px] mx-auto px-4 flex items-center justify-between"
+        class="max-w-[1200px] mx-auto px-6 flex items-center justify-between"
       >
         <a
           href="#"
-          class="flex items-center gap-2 font-semibold text-green-700 text-lg"
+          class="flex items-center gap-3 font-semibold text-green-700 text-lg"
         >
           <img src="./img/logo.svg" alt="Ink. House logo" class="w-6 h-6" />
           Ink. House
         </a>
 
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-6">
           <nav class="hidden md:block">
             <ul class="flex gap-8 text-gray-800">
               <li><a href="#" class="hover:text-green-700">Репродукции</a></li>
@@ -38,6 +57,7 @@
 
           <button
             id="burger"
+            aria-label="menu"
             class="md:hidden flex flex-col justify-between w-6 h-4"
           >
             <span class="block w-full h-[2px] bg-gray-800"></span>
@@ -47,36 +67,38 @@
         </div>
       </div>
 
-      <nav id="mobileMenu" class="hidden md:hidden bg-[#F3F8F4] px-4 py-4">
-        <ul class="flex flex-col gap-4 text-gray-800">
-          <li><a href="#" class="hover:text-green-700">Репродукции</a></li>
-          <li><a href="#" class="hover:text-green-700">Новинки</a></li>
-          <li><a href="#" class="hover:text-green-700">О нас</a></li>
-        </ul>
+      <nav id="mobileMenu" class="hidden md:hidden bg-[#F3F8F4]">
+        <div class="max-w-[1200px] mx-auto px-6 py-4">
+          <ul class="flex flex-col gap-3 text-gray-800">
+            <li><a href="#" class="hover:text-green-700">Репродукции</a></li>
+            <li><a href="#" class="hover:text-green-700">Новинки</a></li>
+            <li><a href="#" class="hover:text-green-700">О нас</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
     <main>
       <section class="bg-white py-12">
         <div
-          class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row items-center gap-10"
+          class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center gap-10"
         >
           <div class="flex-1">
             <img
               src="./img/bird.svg"
               alt="Bird painting"
-              class="w-full max-w-md mx-auto"
+              class="w-full max-w-[520px] mx-auto"
             />
           </div>
 
           <div class="flex-1 text-center md:text-left">
             <h1
-              class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug"
+              class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight"
             >
               Реплики картин<br />
               от <span class="text-green-700">Ink. House</span>
             </h1>
-            <p class="mt-4 text-gray-500 text-base md:text-lg">
+            <p class="mt-4 text-gray-500 text-base md:text-lg max-w-[540px]">
               Высокое качество отрисовки на плотной бумаге или льняном холсте.
               Редкие произведения, доступные цены.
             </p>
@@ -89,8 +111,200 @@
           </div>
         </div>
       </section>
+
+      <section class="py-12">
+        <div class="max-w-[1200px] mx-auto px-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4"
+          >
+            <h2 class="text-2xl lg:text-3xl font-semibold text-gray-900">
+              Репродукции
+            </h2>
+            <div class="flex gap-3">
+              <button
+                data-filter="all"
+                class="filter-btn px-4 py-1.5 rounded-full bg-green-700 text-white text-sm"
+              >
+                Франция
+              </button>
+              <button
+                data-filter="germany"
+                class="filter-btn px-4 py-1.5 rounded-full bg-gray-100 text-gray-700 text-sm"
+              >
+                Германия
+              </button>
+              <button
+                data-filter="england"
+                class="filter-btn px-4 py-1.5 rounded-full bg-gray-100 text-gray-700 text-sm"
+              >
+                Англия
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="bg-[#eaf5ef] p-6 flex flex-col h-full">
+              <div class="w-full mb-4 flex items-center justify-center">
+                <img
+                  src="./img/pic-1.jpg"
+                  alt="Охота Амура"
+                  class="w-full max-w-[260px] max-h-[300px] object-contain"
+                />
+              </div>
+              <p class="text-sm text-gray-500">Марсель Руссо</p>
+              <h3 class="text-lg font-medium text-gray-900 mt-1">
+                Охота Амура
+              </h3>
+              <p class="text-sm text-gray-600 mt-1">Холст, масло (50x80)</p>
+              <p class="text-base font-semibold text-gray-900 mt-3">
+                14 500 руб
+              </p>
+              <button
+                class="mt-auto w-full py-3 border border-green-700 text-green-700 rounded-md hover:bg-green-700 hover:text-white transition"
+              >
+                В корзину
+              </button>
+            </article>
+
+            <article class="bg-[#eaf5ef] p-6 flex flex-col h-full">
+              <div class="w-full mb-4 flex items-center justify-center">
+                <img
+                  src="./img/pic-2.jpg"
+                  alt="Дама с собачкой"
+                  class="w-full max-w-[260px] max-h-[300px] object-contain"
+                />
+              </div>
+              <p class="text-sm text-gray-500">Анри Селин</p>
+              <h3 class="text-lg font-medium text-gray-900 mt-1">
+                Дама с собачкой
+              </h3>
+              <p class="text-sm text-gray-600 mt-1">Акрил, бумага (50x80)</p>
+              <p class="text-base font-semibold text-gray-900 mt-3">
+                16 500 руб
+              </p>
+              <button
+                class="mt-auto w-full py-3 border border-green-700 text-green-700 rounded-md hover:bg-green-700 hover:text-white transition"
+              >
+                В корзину
+              </button>
+            </article>
+
+            <article class="bg-[#eaf5ef] p-6 flex flex-col h-full">
+              <div class="w-full mb-4 flex items-center justify-center">
+                <img
+                  src="./img/pic-3.jpg"
+                  alt="Процедура"
+                  class="w-full max-w-[260px] max-h-[300px] object-contain"
+                />
+              </div>
+              <p class="text-sm text-gray-500">Франсуа Дюпон</p>
+              <h3 class="text-lg font-medium text-gray-900 mt-1">Процедура</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Цветная литография (40x60)
+              </p>
+              <p class="text-base font-semibold text-gray-900 mt-3">
+                20 000 руб
+              </p>
+              <button
+                class="mt-auto w-full py-3 border border-green-700 text-green-700 rounded-md hover:bg-green-700 hover:text-white transition"
+              >
+                В корзину
+              </button>
+            </article>
+
+            <article class="bg-[#eaf5ef] p-6 flex flex-col h-full">
+              <div class="w-full mb-4 flex items-center justify-center">
+                <img
+                  src="./img/pic-4.jpg"
+                  alt="Роза"
+                  class="w-full max-w-[260px] max-h-[300px] object-contain"
+                />
+              </div>
+              <p class="text-sm text-gray-500">Луи Дегуш</p>
+              <h3 class="text-lg font-medium text-gray-900 mt-1">Роза</h3>
+              <p class="text-sm text-gray-600 mt-1">Бумага, акрил (50x80)</p>
+              <p class="text-base font-semibold text-gray-900 mt-3">
+                12 000 руб
+              </p>
+              <button
+                class="mt-auto w-full py-3 border border-green-700 text-green-700 rounded-md hover:bg-green-700 hover:text-white transition"
+              >
+                В корзину
+              </button>
+            </article>
+
+            <article class="bg-[#eaf5ef] p-6 flex flex-col h-full">
+              <div class="w-full mb-4 flex items-center justify-center">
+                <img
+                  src="./img/pic-5.jpg"
+                  alt="Птичья трапеза"
+                  class="w-full max-w-[260px] max-h-[300px] object-contain"
+                />
+              </div>
+              <p class="text-sm text-gray-500">Франсуа Дюпон</p>
+              <h3 class="text-lg font-medium text-gray-900 mt-1">
+                Птичья трапеза
+              </h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Цветная литография (40x60)
+              </p>
+              <p class="text-base font-semibold text-gray-900 mt-3">
+                22 500 руб
+              </p>
+              <button
+                class="mt-auto w-full py-3 border border-green-700 text-green-700 rounded-md hover:bg-green-700 hover:text-white transition"
+              >
+                В корзину
+              </button>
+            </article>
+
+            <article class="bg-[#eaf5ef] p-6 flex flex-col h-full">
+              <div class="w-full mb-4 flex items-center justify-center">
+                <img
+                  src="./img/pic-6.jpg"
+                  alt="Пейзаж с рыбой"
+                  class="w-full max-w-[260px] max-h-[300px] object-contain"
+                />
+              </div>
+              <p class="text-sm text-gray-500">Пьер Морач</p>
+              <h3 class="text-lg font-medium text-gray-900 mt-1">
+                Пейзаж с рыбой
+              </h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Цветная литография (40x60)
+              </p>
+              <p class="text-base font-semibold text-gray-900 mt-3">
+                20 000 руб
+              </p>
+              <button
+                class="mt-auto w-full py-3 border border-green-700 text-green-700 rounded-md hover:bg-green-700 hover:text-white transition"
+              >
+                В корзину
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="./main.js"></script>
+    <script>
+      const burger = document.getElementById("burger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      burger &&
+        burger.addEventListener("click", () =>
+          mobileMenu.classList.toggle("hidden")
+        );
+
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          document.querySelectorAll(".filter-btn").forEach((b) => {
+            b.classList.remove("bg-green-700", "text-white");
+            b.classList.add("bg-gray-100", "text-gray-700");
+          });
+          e.currentTarget.classList.remove("bg-gray-100", "text-gray-700");
+          e.currentTarget.classList.add("bg-green-700", "text-white");
+        });
+      });
+    </script>
   </body>
 </html>
